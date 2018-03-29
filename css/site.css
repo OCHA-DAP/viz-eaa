@@ -28,12 +28,12 @@ h6 {
 .categoryLabels,
 .categoryStats {
 	display: flex;
-	margin: 0 0 5px 150px;
+	margin: 0 0 5px 120px;
 }
 .categorySublabel,
 .categoryDescription {
 	display: flex;
-	margin: 0 0 5px 365px;
+	margin: 0 0 5px 335px;
 }
 .categoryLabels div,
 .categoryStats div {
@@ -75,12 +75,9 @@ h6 {
 	display: inline-block;
 }
 .legend {
-	display: inline-block;
-	margin-top: -22px;
-	vertical-align: top;
+	margin-left: 118px;
 }
 .legend label {
-	color: #999;
 	font-size: 12px;
 	font-weight: 400;
 	margin-bottom: 6px;

@@ -47,9 +47,9 @@ function createHeatMap(dataArray) {
         itemHeight = 34,
         cellWidth = itemWidth - 2,
         cellHeight = itemHeight - 2,
-        margin = {top: 5, right: 20, bottom: 20, left: 150};
+        margin = {top: 5, right: 0, bottom: 20, left: 120};
         
-    let width = 790 - margin.right - margin.left,
+    let width = 750 - margin.right - margin.left,
         height = (countryTotal*itemHeight);
 
     let data = dataArray.map(function(item) {
