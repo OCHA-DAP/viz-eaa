@@ -117,16 +117,17 @@ text {
 	fill-opacity: 0.5;
 }
 .d3-tip {
-    padding: 10px 25px;
     background-color:white;
     background: rgba(255,255,255,0.9);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 5px;
     font-size: 1em;
+    max-width: 315px;
+    padding: 10px 25px;
 }
-.d3-tip ul {
-	list-style-type: none;
-	margin: 0;
+.d3-tip ol {
+	color: #428bca;
+	margin: 0 0 10px 10px;
 	padding: 0;
 }
 .d3-tip li {
@@ -139,8 +140,8 @@ text {
 	text-transform: capitalize;
 }
 .d3-tip:after {
-	top: 100%;
-	left: 50%;
+	right: 100%;
+	top: 50%;
 	border: solid transparent;
 	content: " ";
 	height: 0;
@@ -148,7 +149,22 @@ text {
 	position: absolute;
 	pointer-events: none;
 	border-color: rgba(255, 255, 255, 0);
-	border-top-color: #ffffff;
+	border-right-color: #ffffff;
 	border-width: 8px;
-	margin-left: -8px;
+	margin-top: -8px;
+}
+
+.d3-tip.left:after {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: #ffffff;
+	border-width: 8px;
+	margin-top: -8px;
 }

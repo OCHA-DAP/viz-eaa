@@ -68,15 +68,22 @@ function createHeatMap(dataArray) {
     let tip = d3.tip()
         .attr('class', 'd3-tip')
         .offset([0, 0])
-        .html(function(d) { 
-            let links = '<ul>';
+        .direction(function(d,i) {
+            let dir = 'e';
+            if (d.indicator==='#output+crisis+data+subnational+url') {
+                dir = 'w';
+                $('.d3-tip').addClass('left');
+            }
+            return dir;
+        })
+        .html(function(d, i) { 
+            let links = '<ol>';
             let datasetArray = getDatasets(d.dataset);
             datasetArray.forEach(function(link, index) {
                 let dataURL = 'https://data.humdata.org/search?q=name:('+link+')';
-                links += '<li><a href='+dataURL+' target="_blank">' + (index+1) + '. ' + formatName(link) + '</a></li>';
+                links += '<li><a href='+dataURL+' target="_blank">' + formatName(link) + '</a></li>';
             });
-            if (datasetArray.length>1) links += '<li><a href='+d.dataset+' target="_blank">See all</a></li>';
-            links += '</ul>';
+            if (datasetArray.length>1) links += '</ol><a href='+d.dataset+' target="_blank">See all</a>';
             return links; 
         });
 
