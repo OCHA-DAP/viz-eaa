@@ -74,6 +74,9 @@ function createHeatMap(dataArray) {
                 dir = 'w';
                 $('.d3-tip').addClass('left');
             }
+            else {
+                $('.d3-tip').removeClass('left');
+            }
             return dir;
         })
         .html(function(d, i) { 
