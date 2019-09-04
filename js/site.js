@@ -305,6 +305,6 @@ $.when(dataCall, categoryCall).then(function(dataArgs, categoryArgs){
 
     //remove loader
     $('.sp-circle').remove();
-    $('.viz-container').show();
+    $('.viz-container, footer').show();
     createHeatMap(dataArray);
 });
