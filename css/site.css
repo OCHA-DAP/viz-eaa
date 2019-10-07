@@ -67,9 +67,10 @@ h6 {
 }
 .categoryStats div {
 	color: #1bb580;
+	font-size: 12px;
 }
 .categoryStats div span {
-	font-size: 30px;
+	font-size: 28px;
 }
 .categoryStats .pipe {
 	color: #000;
